@@ -1,6 +1,6 @@
 <?php
 
-namespace Ajthinking\FME;
+namespace Ajthinking\LaravelFME;
 
 //use Illuminate\Http\Request;
 //use App\Http\Requests;

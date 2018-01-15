@@ -1,24 +1,13 @@
 <?php
 
-use Ajthinking\FME\FMEServer;
+use Ajthinking\LaravelFME\FMEServer;
 
 Route::get('/test', function() {
     $fmeServer = new FMEServer;
     return $fmeServer->dataDownload();
 });
 
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/fme/workspace', function() {
+Route::get('/fme/workspace/{workspace}', function() {
     $fmeServer = new FMEServer;
     return $fmeServer->dataDownload();
 });
