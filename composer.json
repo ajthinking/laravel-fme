@@ -15,7 +15,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ajthinking\\laravel-fme\\FMEServiceProvider"
+                "Ajthinking\\LaravelFME\\FMEServiceProvider"
             ]
         }
     },
