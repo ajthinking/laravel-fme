@@ -11,5 +11,17 @@
     ],
     "require": {
         "guzzlehttp/guzzle": "^6.3"
-    }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ajthinking\\laravel-fme\\FMEServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Ajthinking\\laravel-fme\\": "src/"
+        }
+    }        
 }

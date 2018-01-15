@@ -1,7 +1,7 @@
 <?php
-namespace Ajthinking\FME;
+namespace Ajthinking\LaravelFME;
 use Illuminate\Support\ServiceProvider;
-class FMEServiceServiceProvider extends ServiceProvider
+class FMEServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
