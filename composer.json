@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Ajthinking\\laravel-fme\\": "src/"
+            "Ajthinking\\LaravelFME\\": "src/"
         }
     }        
 }
