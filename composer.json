@@ -1,0 +1,15 @@
+{
+    "name": "ajthinking/laravel-fme",
+    "description": "Connect to your FME Server or Cloud with Laravel",
+    "type": "laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anders Jürisoo",
+            "email": "jurisoo@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    }
+}
