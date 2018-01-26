@@ -2,21 +2,19 @@
 
 use Ajthinking\LaravelFME\FMEServer;
 
-Route::get('/test', function() {
+Route::get('/fme/{workspace}/datadownload', function($workspace) {
     $fmeServer = new FMEServer;
-    return $fmeServer->dataDownload();
+    return $fmeServer->dataDownload($workspace);
 });
 
-Route::get('/fme/workspace/{workspace}', function() {
-    $fmeServer = new FMEServer;
-    return $fmeServer->dataDownload();
+Route::get('/fme/jobs/{id}', function($id) {
+    $fmeServer = new FMEServer;    
+    return $fmeServer->jobStatus($id);
 });
-
-
 /*
 
 kartor.helsingborg.se/dwg
 composer require ajthinking/fme
 route is now exposed as kartor.helsingborg.se/dwg/fme/workspace/datadownload
-
+OR POST /transformations/submit/< repository >/< workspace >
 */

@@ -20,14 +20,15 @@ class FMEServer
             'headers' => [
                 //'Authorization' => 'fmetoken token=' . env('FME_SERVER_API_TOKEN'),
                 'Accept' => 'application/json',
-                'Content-Type' => 'application/json' 
+                'Content-Type' => 'application/json',
+                'Authorization' => 'fmetoken token=9db027f866557e0e599fea6731aba46af9615e47' //a4d9faae21b98627b98a30ccde85e99d968b7ad3' 
             ],
             'verify' => false
         ]);
     }
 
-    public function dataDownload() {            
-        $sample = "http://A002344/fmedatadownload/test/dwg_download_service.fmw"; 
+    public function dataDownload($workspace) {            
+        $sample = "http://A002344/fmedatadownload/test/" . $workspace . ".fmw"; 
         
         $result = $this->client->request('GET', $sample, [
             "query" => [
@@ -45,7 +46,21 @@ class FMEServer
         return "THERE WAS SOME KIND OF ERROR "; 
     }
 
-    public function jobStatus() {
+    public function jobStatus($id) {
+        $sample = "http://a002344/fmerest/v2/transformations/jobs/id/" . $id . "?detail=low"; 
         
+        $result = $this->client->request('GET', $sample, [
+            "query" => [
+                "opt_responseformat" => "json",
+                "opt_servicemode"=> "async"
+            ]
+        ]);
+
+        if($result->getStatusCode() == 200) {
+            dd(json_decode($result->getBody()));
+            $data = json_decode($result->getBody());            
+            return $data;
+        }
+        return "THERE WAS SOME KIND OF ERROR ";      
     }
 }
