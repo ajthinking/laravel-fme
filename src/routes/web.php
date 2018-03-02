@@ -2,7 +2,7 @@
 
 use Ajthinking\LaravelFME\FMEServer;
 
-Route::get('/fme/{workspace}/datadownload', function($workspace) {
+Route::post('/fme/{workspace}/datadownload', function($workspace) {
     $fmeServer = new FMEServer;
     return $fmeServer->dataDownload($workspace);
 });
