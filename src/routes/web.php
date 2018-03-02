@@ -14,7 +14,7 @@ Route::get('/fme/jobs/{id}', function($id) {
 
 
 Route::get('/fme/test', function() {
-    return "ajthinking/laravel-fme installed succesfully";
+    return "ajthinking/laravel-fme installed and modified succesfully";
 });
 
 
