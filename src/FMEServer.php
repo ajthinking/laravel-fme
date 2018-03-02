@@ -38,12 +38,10 @@ class FMEServer
                 "opt_requesteremail" => "anders.jurisoo@helsingborg.se"
             ]
         ]);        
-        if($result->getStatusCode() == 200) {
-            dd(json_decode($result->getBody()));
+        if($result->getStatusCode() == 200) {            
             $data = json_decode($result->getBody());            
             return $data;
-        }
-        return "THERE WAS SOME KIND OF ERROR "; 
+        }        
     }
 
     public function jobStatus($id) {
