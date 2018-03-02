@@ -11,8 +11,15 @@ Route::get('/fme/jobs/{id}', function($id) {
     $fmeServer = new FMEServer;    
     return $fmeServer->jobStatus($id);
 });
-/*
 
+
+Route::get('/fme/test', function() {
+    return "ajthinking/laravel-fme installed succesfully";
+});
+
+
+
+/*
 kartor.helsingborg.se/dwg
 composer require ajthinking/fme
 route is now exposed as kartor.helsingborg.se/dwg/fme/workspace/datadownload
